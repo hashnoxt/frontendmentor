@@ -5,46 +5,48 @@
 ::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: hsl(47, 88%, 63%);
-  font-family: "Figtree";
+  font-family: "Figtree", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
   border: 1px solid;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 12px;
+  padding: 20px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 12px;
-  width: 370px;
-  /* min-width: 19%; */
+  width: 100%;
+  max-width: 370px;
   box-shadow: 10px 10px;
 }
 
 .cover {
+  width: 100%;
   border-radius: 12px;
   display: block;
-  margin: auto;
 }
 
 .learning-text {
-  margin: 15px 2px;
+  margin-top: 15px;
   background-color: hsl(47, 88%, 63%);
-  width: 23%;
-  padding: 5px 0px 5px 7px;
+  padding: 5px 10px;
   font-weight: bold;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .published-text,
-.title-text {
-  margin: 15px 2px;
-  /* width: 50%; */
+.title-text,
+.description-text {
+  margin-top: 15px;
 }
 
 .title-text {
@@ -53,21 +55,37 @@ body {
 }
 
 .description-text {
-  margin: 15px 2px;
-  /* width: 50%; */
+  color: hsl(0, 0%, 40%);
+  line-height: 1.5;
 }
 
 .profile-section {
-  margin: auto 2px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .profile-image {
-  vertical-align: middle;
   width: 40px;
+  border-radius: 50%;
 }
 
 .profile-mane-text {
-  display: inline-block;
   font-weight: bold;
-  margin-left: 10px;
+}
+
+/* Optional: improve spacing and font on smaller screens */
+@media (max-width: 400px) {
+  .title-text {
+    font-size: 1.1em;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .description-text {
+    font-size: 0.9em;
+  }
 }
