@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 ::after,
 ::before {
@@ -26,11 +34,12 @@ body {
 
 .card {
   width: 35rem;
-  height: 50rem;
+  height: 58rem;
   background-color: hsl(0, 0%, 12%);
   border-radius: 1rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .profile-picture-section {
@@ -43,4 +52,56 @@ body {
   width: 100%;
   border-radius: 5rem;
   margin-top: 3rem;
+}
+
+.profile-name {
+  margin-top: 5rem;
+  font-family: "Inter", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-size: 2.2rem;
+}
+
+.location-text {
+  margin-top: 0.7rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  color: hsl(75, 94%, 57%);
+}
+
+.description-text {
+  color: hsl(0, 0%, 100%);
+  margin-top: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.social-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.social-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 80%;
+  height: 4rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: hsl(0, 0%, 20%);
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+}
+
+.social-menu-item:nth-child(1) {
+  margin-top: 3rem;
+}
+
+.social-menu-item:hover {
+  text-decoration: none;
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 20%);
 }
